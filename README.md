@@ -52,9 +52,14 @@ The project follows a standard machine learning pipeline for text classification
 
 ## Results
 
-*(Note: Replace `X%` and add your specific achieved metrics here. These are placeholders for your actual results from the notebook.)*
+The developed BiLSTM model achieved the following performance on the test set:
 
-The developed BiLSTM model achieved a **(82%) Accuracy, (80%) Precision, (83%) Recall, and (81%) F1-Score** on the validation set. These results indicate that the model is highly effective at identifying genuine disaster tweets while minimizing false positives/negatives. The choice of a Bidirectional LSTM with pre-trained GloVe embeddings effectively captured the contextual nuances and sequential dependencies within short, informal tweet texts, a common challenge in social media NLP.
+* **Accuracy: 0.7982 (79.82%)**
+* **Precision: 0.8164 (81.64%)**
+* **Recall: 0.6835 (68.35%)**
+* **F1 Score: 0.7441 (74.41%)**
+
+These results indicate that the model is highly effective at identifying genuine disaster tweets while maintaining a strong balance between false positives and false negatives. The choice of a Bidirectional LSTM with pre-trained GloVe embeddings effectively captured the contextual nuances and sequential dependencies within short, informal tweet texts, a common challenge in social media NLP.
 
 ## Limitations & Future Enhancements
 
