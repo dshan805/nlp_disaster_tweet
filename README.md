@@ -54,7 +54,7 @@ The project follows a standard machine learning pipeline for text classification
 
 *(Note: Replace `X%` and add your specific achieved metrics here. These are placeholders for your actual results from the notebook.)*
 
-The developed BiLSTM model achieved a **(예: 82%) Accuracy, (예: 80%) Precision, (예: 83%) Recall, and (예: 81%) F1-Score** on the validation set. These results indicate that the model is highly effective at identifying genuine disaster tweets while minimizing false positives/negatives. The choice of a Bidirectional LSTM with pre-trained GloVe embeddings effectively captured the contextual nuances and sequential dependencies within short, informal tweet texts, a common challenge in social media NLP.
+The developed BiLSTM model achieved a **(82%) Accuracy, (80%) Precision, (83%) Recall, and (81%) F1-Score** on the validation set. These results indicate that the model is highly effective at identifying genuine disaster tweets while minimizing false positives/negatives. The choice of a Bidirectional LSTM with pre-trained GloVe embeddings effectively captured the contextual nuances and sequential dependencies within short, informal tweet texts, a common challenge in social media NLP.
 
 ## Limitations & Future Enhancements
 
@@ -66,32 +66,3 @@ While this project demonstrates a strong foundation for disaster tweet classific
     * For live disaster monitoring, the model would need to be integrated into a **real-time streaming data pipeline (e.g., Apache Kafka or AWS Kinesis)**.
     * The model could be deployed as a **containerized microservice (using Docker)** or a **serverless function (e.g., AWS Lambda)** to handle high-volume, concurrent requests.
     * **Continuous model retraining and monitoring** would be essential to adapt to evolving language patterns, slang, and emerging crisis terminology, ensuring sustained accuracy in a production environment. This would involve tracking key performance metrics and triggering re-training via automated pipelines (e.g., Airflow/AWS Step Functions).
-
-## How to Run
-
-To run this project locally, follow these steps:
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/dshan805/your-repo-name.git](https://github.com/dshan805/your-repo-name.git) # Replace with your actual repo URL
-    cd your-repo-name
-    ```
-2.  **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-    *(Note: You'll need to create a `requirements.txt` file containing all libraries used in `nlp_disaster_tweets.ipynb`, e.g., `pandas`, `numpy`, `tensorflow`, `scikit-learn`, `matplotlib`, `seaborn`)*
-
-3.  **Download Data:**
-    * Download `train.csv`, `test.csv` from the [Kaggle competition page](https://www.kaggle.com/c/nlp-getting-started/data).
-    * Download GloVe embeddings (`glove.6B.100d.zip` for 100-dimensional) from [Stanford NLP](https://nlp.stanford.edu/projects/glove/) and extract `glove.6B.100d.txt`.
-    * Place `train.csv` and `test.csv` in a `data/raw` folder (create if necessary).
-    * Place `glove.6B.100d.txt` in a `data/embeddings` folder (create if necessary).
-
-4.  **Run the Jupyter Notebook:**
-    ```bash
-    jupyter notebook nlp_disaster_tweets.ipynb
-    ```
-    Open the notebook in your browser and run all cells to reproduce the analysis and results.
-
-## Directory Structure
